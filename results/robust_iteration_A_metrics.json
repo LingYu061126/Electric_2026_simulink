@@ -1,0 +1,17 @@
+{
+  "iteration": "A",
+  "change": "Smooth current PI gain scheduling: light-load Kp=0.160 Ki=100 versus nominal Kp=0.105 Ki=66",
+  "reason": "Test whether light-load current-loop bandwidth reduces distortion",
+  "averaged_crossover_Hz": 1531.1,
+  "averaged_phase_margin_deg": 72.5,
+  "operating_point": "36 V / 0.2 A / 30 Hz",
+  "measurement_window_s": [
+    0.8,
+    1
+  ],
+  "PF": 0.88537835593030134,
+  "efficiency_percent": 94.556474125211579,
+  "THD_max_percent": 1.3724306636299262,
+  "Uline_V": 32.013076906448887,
+  "decision": "Reject as final: PF remains below 0.98; small improvement retained as evidence only"
+}

@@ -1,0 +1,12 @@
+{
+  "baseline_model": "acac_30hz_r2024a",
+  "derived_model": "acac_robust_optimized_r2024a",
+  "physical_block_count": 51,
+  "mismatched_block_count": 0,
+  "mismatched_blocks": [],
+  "all_physical_masks_equal": true,
+  "solver_configuration_equal": true,
+  "solver": "daessc",
+  "max_step_s": "1e-6",
+  "comparison": "ReferenceBlock, MaskNames and MaskValues for every SimscapeBlock"
+}

@@ -1,0 +1,15 @@
+{
+  "iteration": "D",
+  "change": "PFC carrier 20 kHz to 50 kHz, other controls unchanged",
+  "reason": "Test measured near-fixed absolute 20 kHz input-current ripple",
+  "operating_point": "36 V / 0.2 A / 30 Hz",
+  "measurement_window_s": [
+    0.8,
+    1
+  ],
+  "PF": 0.92492017776387181,
+  "efficiency_percent": 93.811359658518455,
+  "THD_max_percent": 1.3767674178934517,
+  "Uline_V": 32.012508672842579,
+  "decision": "Rejected: PF remains below 0.98 and model efficiency drops below 95%"
+}

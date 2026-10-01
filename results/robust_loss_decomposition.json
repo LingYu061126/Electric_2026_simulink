@@ -1,0 +1,122 @@
+{
+  "window_s": [
+    0.8,
+    1
+  ],
+  "model": "models/acac_30hz_r2024a.slx",
+  "method": "Measured waveform i^2R for input winding and DC-link ESR; topology-based active-device resistance proxy; RC-reconstructed output branch currents.",
+  "note": "Switch-path current proxies and reconstructed capacitor current are estimates. Residual is unresolved modeled loss, not assigned to a fabricated branch.",
+  "points": [
+    {
+      "Ui_target_V": 31,
+      "Pin_W": 116.77311160418328,
+      "Pout_W": 110.90997462587337,
+      "total_loss_W": 5.86313697830991,
+      "efficiency_percent": 94.979035072574135,
+      "Iin_rms_A": 3.7760485206639491,
+      "Icap_dc_rms_A": 2.5520983855604826,
+      "Iout_filter_rms_A": [
+        2.0057464576190553,
+        2.0052356994014344,
+        2.0053878966954404
+      ],
+      "Iout_capacitor_rms_A": [
+        0.12618033315625052,
+        0.12622079465590585,
+        0.12616659132437893
+      ],
+      "boost_inductor_copper_W": 1.1406833944326717,
+      "PFC_fast_MOSFET_external_R_est_W": 0.71292712152041993,
+      "PFC_slow_MOSFET_external_R_est_W": 0.71292712152041993,
+      "PFC_MOSFET_external_R_est_W": 1.4258542430408399,
+      "DC_link_ESR_W": 0.2605282467832169,
+      "inverter_MOSFET_external_R_est_W": 0.60327848393089556,
+      "output_inductor_copper_est_W": 0.96524557428943281,
+      "output_capacitor_damping_est_W": 0.047771174245403572,
+      "unresolved_aggregate_W": 1.419775861587449,
+      "PFC_DC_output_power_W": 115.08202073902847,
+      "inverter_DC_input_power_W": 112.5317621851777,
+      "full_switching_waveforms": true,
+      "sensor_or_reconstruction_notes": [
+        "Boost current: source current sensor in series after precharge bypass.",
+        "DC ESR current: PFC DC current minus inverter DC current, from bus KCL.",
+        "Output capacitor current: reconstructed first-order series RC branch using measured phase voltage.",
+        "PFC/VSI switch branch current: ideal synchronous conduction path proxy, not directly measured."
+      ]
+    },
+    {
+      "Ui_target_V": 36,
+      "Pin_W": 115.85573924469682,
+      "Pout_W": 110.90996553757613,
+      "total_loss_W": 4.9457737071206935,
+      "efficiency_percent": 95.7310930478163,
+      "Iin_rms_A": 3.22814241883315,
+      "Icap_dc_rms_A": 2.2934817234101379,
+      "Iout_filter_rms_A": [
+        2.0057204456519764,
+        2.0052556768394707,
+        2.0053979686256564
+      ],
+      "Iout_capacitor_rms_A": [
+        0.12622732661837333,
+        0.12620838427705977,
+        0.12618488016997112
+      ],
+      "boost_inductor_copper_W": 0.83367227810159517,
+      "PFC_fast_MOSFET_external_R_est_W": 0.521045173813497,
+      "PFC_slow_MOSFET_external_R_est_W": 0.521045173813497,
+      "PFC_MOSFET_external_R_est_W": 1.042090347626994,
+      "DC_link_ESR_W": 0.21040233662465346,
+      "inverter_MOSFET_external_R_est_W": 0.60327929240855982,
+      "output_inductor_copper_est_W": 0.96524686785369573,
+      "output_capacitor_damping_est_W": 0.047784518230557453,
+      "unresolved_aggregate_W": 1.243298066274638,
+      "PFC_DC_output_power_W": 115.19987991274859,
+      "inverter_DC_input_power_W": 112.52810898541854,
+      "full_switching_waveforms": true,
+      "sensor_or_reconstruction_notes": [
+        "Boost current: source current sensor in series after precharge bypass.",
+        "DC ESR current: PFC DC current minus inverter DC current, from bus KCL.",
+        "Output capacitor current: reconstructed first-order series RC branch using measured phase voltage.",
+        "PFC/VSI switch branch current: ideal synchronous conduction path proxy, not directly measured."
+      ]
+    },
+    {
+      "Ui_target_V": 41,
+      "Pin_W": 115.21603210377023,
+      "Pout_W": 110.91498501204886,
+      "total_loss_W": 4.3010470917213723,
+      "efficiency_percent": 96.266971693793792,
+      "Iin_rms_A": 2.8216756932979972,
+      "Icap_dc_rms_A": 2.0658606283818721,
+      "Iout_filter_rms_A": [
+        2.0057687905344359,
+        2.0052292690179012,
+        2.005510783847404
+      ],
+      "Iout_capacitor_rms_A": [
+        0.12619757819145111,
+        0.1262311435985268,
+        0.12618253216507333
+      ],
+      "boost_inductor_copper_W": 0.63694829745189874,
+      "PFC_fast_MOSFET_external_R_est_W": 0.39809268590743674,
+      "PFC_slow_MOSFET_external_R_est_W": 0.39809268590743674,
+      "PFC_MOSFET_external_R_est_W": 0.79618537181487348,
+      "DC_link_ESR_W": 0.17071120543593374,
+      "inverter_MOSFET_external_R_est_W": 0.60330631832681358,
+      "output_inductor_copper_est_W": 0.9652901093229016,
+      "output_capacitor_damping_est_W": 0.04778216177916908,
+      "unresolved_aggregate_W": 1.080823627589782,
+      "PFC_DC_output_power_W": 112.40893985375277,
+      "inverter_DC_input_power_W": 112.55370665129267,
+      "full_switching_waveforms": true,
+      "sensor_or_reconstruction_notes": [
+        "Boost current: source current sensor in series after precharge bypass.",
+        "DC ESR current: PFC DC current minus inverter DC current, from bus KCL.",
+        "Output capacitor current: reconstructed first-order series RC branch using measured phase voltage.",
+        "PFC/VSI switch branch current: ideal synchronous conduction path proxy, not directly measured."
+      ]
+    }
+  ]
+}

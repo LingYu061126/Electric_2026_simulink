@@ -1,0 +1,139 @@
+{
+  "model": "models/acac_30hz_r2024a.slx",
+  "source_metrics": [
+    "results/acac_baseline_60hz_metrics.json",
+    "results/acac_req5_metrics.json",
+    "results/acac_req6_load_regulation.json",
+    "results/acac_req7_line_regulation.json"
+  ],
+  "steady_window_s": [
+    0.8,
+    1.0
+  ],
+  "measurement_policy": "Original full-switching measurements; no changed loss parameters or analysis window.",
+  "original_requirements_1_to_7_pass": true,
+  "nominal_60Hz": {
+    "PF": 0.9969301284436396,
+    "efficiency_percent": 95.65765620884004,
+    "THD_max_percent": 1.3179877858507332,
+    "Uline_V": 32.01309188391455
+  },
+  "nominal_30Hz": {
+    "PF": 0.9969247206207892,
+    "efficiency_percent": 95.7310930478163,
+    "THD_max_percent": 1.2044889683364686,
+    "Uline_V": 32.00847334879641
+  },
+  "load_sweep": [
+    {
+      "Iout_target_A": 0.2,
+      "Rphase_Ohm": 92.37604307034012,
+      "Uline_V": 32.01322290735978,
+      "Iout_measured_A": 0.20008264317100077,
+      "PF": 0.8793822738528188,
+      "efficiency_percent": 94.45025600360496,
+      "THD_max_percent": 1.3749888504890035,
+      "Vdc_V": 60.000165124057766
+    },
+    {
+      "Iout_target_A": 0.5,
+      "Rphase_Ohm": 36.950417228136054,
+      "Uline_V": 32.01268717255012,
+      "Iout_measured_A": 0.500198237071096,
+      "PF": 0.9761711971079134,
+      "efficiency_percent": 96.848309796787,
+      "THD_max_percent": 1.2160732581614868,
+      "Vdc_V": 60.00037152125512
+    },
+    {
+      "Iout_target_A": 1,
+      "Rphase_Ohm": 18.475208614068027,
+      "Uline_V": 32.01289461877289,
+      "Iout_measured_A": 1.0004029568366528,
+      "PF": 0.9927192921059855,
+      "efficiency_percent": 96.99398905930431,
+      "THD_max_percent": 1.1919652070212583,
+      "Vdc_V": 60.0007036261678
+    },
+    {
+      "Iout_target_A": 1.5,
+      "Rphase_Ohm": 12.316805742712017,
+      "Uline_V": 32.01315511290803,
+      "Iout_measured_A": 1.500616645917563,
+      "PF": 0.9957317397561825,
+      "efficiency_percent": 96.45138993682605,
+      "THD_max_percent": 1.1986876048863904,
+      "Vdc_V": 60.000948137909035
+    },
+    {
+      "Iout_target_A": 2,
+      "Rphase_Ohm": 9.237604307034013,
+      "Uline_V": 32.00847334879641,
+      "Iout_measured_A": 2.0005295843079733,
+      "PF": 0.9969247206207892,
+      "efficiency_percent": 95.7310930478163,
+      "THD_max_percent": 1.2044889683364686,
+      "Vdc_V": 60.00110390128109
+    }
+  ],
+  "input_sweep": [
+    {
+      "Ui_target_V": 31,
+      "Ui_measured_V": 31.00000000000004,
+      "Uline_V": 32.00847462570277,
+      "Iout_A": 2.0005296641075834,
+      "PF": 0.9975704886372962,
+      "efficiency_percent": 94.97903507257413,
+      "THD_max_percent": 1.182811686479295,
+      "Vdc_V": 60.00093783730725
+    },
+    {
+      "Ui_target_V": 33,
+      "Ui_measured_V": 32.99999999999998,
+      "Uline_V": 32.00833115183088,
+      "Iout_A": 2.0005206969907583,
+      "PF": 0.997376931570349,
+      "efficiency_percent": 95.33717567906093,
+      "THD_max_percent": 1.1891308535085618,
+      "Vdc_V": 59.998665069360634
+    },
+    {
+      "Ui_target_V": 36,
+      "Ui_measured_V": 35.99999999999999,
+      "Uline_V": 32.00847334879641,
+      "Iout_A": 2.0005295843079733,
+      "PF": 0.9969247206207892,
+      "efficiency_percent": 95.7310930478163,
+      "THD_max_percent": 1.2044889683364686,
+      "Vdc_V": 60.00110390128109
+    },
+    {
+      "Ui_target_V": 39,
+      "Ui_measured_V": 38.99999999999999,
+      "Uline_V": 32.00881877285151,
+      "Iout_A": 2.0005511733031516,
+      "PF": 0.9963043985872099,
+      "efficiency_percent": 96.06039471603962,
+      "THD_max_percent": 1.1942135174613302,
+      "Vdc_V": 60.000610524763026
+    },
+    {
+      "Ui_target_V": 41,
+      "Ui_measured_V": 41.00000000000001,
+      "Uline_V": 32.009197605054894,
+      "Iout_A": 2.000574850315917,
+      "PF": 0.9959142828344237,
+      "efficiency_percent": 96.26697169379379,
+      "THD_max_percent": 1.1924431619328046,
+      "Vdc_V": 59.99927817295587
+    }
+  ],
+  "SI_span_percent": 0.014842370510548264,
+  "SI_dev_percent": 0.04132158549932097,
+  "SU_span_percent": 0.00270766632504138,
+  "SU_dev_percent": 0.028742515796542634,
+  "all_load_PF_ge_0_98": false,
+  "all_load_eta_ge_95": false,
+  "all_input_eta_ge_95": false,
+  "all_THD_le_2": true
+}

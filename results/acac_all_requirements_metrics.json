@@ -1,0 +1,16 @@
+{
+  "requirement_1_pass": true,
+  "requirement_2_pass": true,
+  "requirement_3_pass": true,
+  "requirement_4_pass": true,
+  "requirement_5_pass": true,
+  "requirement_6_pass": true,
+  "requirement_7_pass": true,
+  "requirement_8_defined": false,
+  "requirements_1_to_7_passed": true,
+  "all_explicit_quantitative_requirements_passed": true,
+  "Req7_and_original_quality_metrics_pass": true,
+  "line_sweep_efficiency_ge95_all_points": false,
+  "load_sweep_PF_ge098_all_points": false,
+  "all_requirements_simultaneously_satisfied": false
+}

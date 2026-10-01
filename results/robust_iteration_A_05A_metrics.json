@@ -1,0 +1,11 @@
+{
+  "iteration": "A",
+  "operating_point": "36 V / 0.5 A / 30 Hz",
+  "change": "Same light-load PI gain scheduling candidate as A_02A",
+  "reason": "Check whether 0.5 A PF clears 0.98",
+  "PF": 0.97617747740997474,
+  "efficiency_percent": 96.841957324685453,
+  "THD_max_percent": 1.2189800711712817,
+  "Uline_V": 32.012985643147708,
+  "decision": "Rejected: PF 0.976177 remains below 0.98 and gain versus baseline is negligible"
+}

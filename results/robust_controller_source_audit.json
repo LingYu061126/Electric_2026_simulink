@@ -1,0 +1,5 @@
+{
+  "normalized_control_match": true,
+  "stateflow_parameter": "Fout_Hz",
+  "note": "Stateflow adds model-workspace parameter Fout_Hz to generated MATLAB Function signature; controller body and all other lines match the retained source."
+}

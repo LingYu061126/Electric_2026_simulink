@@ -1,0 +1,23 @@
+{
+  "stage": "PFC with 30.5 ohm equivalent DC load; inverter gate commands disabled",
+  "stop_time_s": 1,
+  "steady_window_s": [
+    0.8,
+    1
+  ],
+  "equivalent_load_ohm": 30.5,
+  "input_voltage_rms_V": 35.999999999999936,
+  "input_current_rms_A": 3.3707775376533409,
+  "input_real_power_W": 120.99542606307392,
+  "input_power_factor": 0.99709459309125936,
+  "dc_bus_mean_V": 60.001140891220594,
+  "dc_bus_pp_ripple_V": 1.5062629147033917,
+  "dc_bus_error_percent": 0.0019014853676561454,
+  "dc_load_power_W": 118.04510212938018,
+  "pfc_duty_mean": 0.45678981706620525,
+  "max_inverter_gate_command": 0,
+  "pass": true,
+  "input_displacement_factor": 0.99994651327132567,
+  "input_current_thd_percent": 5.6726987727044955,
+  "dc_load_current_mean_A": 1.967250521023624
+}

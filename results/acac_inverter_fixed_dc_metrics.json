@@ -1,0 +1,34 @@
+{
+  "stage": "Fixed 60 V physical DC source, six-switch VSI, LC filter, floating Y load",
+  "stop_time_s": 1,
+  "steady_window_s": [
+    0.8,
+    1
+  ],
+  "dc_bus_mean_V": 60,
+  "line_voltage_rms_V": [
+    32.01004776559612,
+    32.009384833112733,
+    32.008985429832819
+  ],
+  "phase_current_rms_A": [
+    2.0005975309746473,
+    2.0006224975415487,
+    2.0005560985255539
+  ],
+  "line_voltage_thd_percent": [
+    0.86507920150229378,
+    0.86753410861255875,
+    0.86588395058249745
+  ],
+  "output_frequency_Hz": 60.004873002572445,
+  "shootthrough_A": 0,
+  "shootthrough_B": 0,
+  "shootthrough_C": 0,
+  "pass": true,
+  "line_voltage_broadband_thd_percent": [
+    1.2502913791029107,
+    1.2445055388426429,
+    1.2593033351031668
+  ]
+}

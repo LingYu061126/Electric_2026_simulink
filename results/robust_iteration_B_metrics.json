@@ -1,0 +1,15 @@
+{
+  "iteration": "B",
+  "change": "Near-zero-crossing PFC duty correction, maximum 0.08 for |Vin|<12 V",
+  "reason": "Test whether the observed zero-cross current spike drives the low-load PF loss",
+  "operating_point": "36 V / 0.2 A / 30 Hz",
+  "measurement_window_s": [
+    0.8,
+    1
+  ],
+  "PF": 0.86286682343330556,
+  "efficiency_percent": 94.4441748240373,
+  "THD_max_percent": 1.3762840628791533,
+  "Uline_V": 32.013191654193463,
+  "decision": "Rejected: PF degraded from 0.87938 to 0.86287"
+}

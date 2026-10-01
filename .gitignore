@@ -1,0 +1,17 @@
+# MATLAB and Simulink generated caches
+*.slxc
+slprj/
+/.matlab_sdi_archive/
+*.asv
+*.m~
+
+# Large simulation traces are reproducible from scripts and models.
+/results/*.mat
+
+# Python generated files
+__pycache__/
+*.pyc
+
+# Local editor and operating-system files
+.DS_Store
+*~

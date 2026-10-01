@@ -1,0 +1,23 @@
+{
+  "Vin": 24,
+  "duty": 0.5,
+  "switching_frequency": 10000,
+  "Vout_mean": 11.943420848827463,
+  "Vout_pp": 0.016341681725645429,
+  "iL_mean": 1.1942752178512037,
+  "iL_pp": 0.60289520960932186,
+  "iL_min": 0.89290652894300648,
+  "Iload_mean": 1.1943420848827457,
+  "Vout_theory": 12,
+  "Vout_error_percent": 0.47149292643780721,
+  "iL_pp_theory": 0.60282895755862687,
+  "iL_pp_error_percent": 0.010990190478457468,
+  "duty_measured": 0.50000000000027756,
+  "switching_frequency_measured": 9999.9999999997144,
+  "conduction_mode": "CCM",
+  "compiled": true,
+  "simulated": true,
+  "measured": true,
+  "no_nan_or_inf": true,
+  "validated": true
+}

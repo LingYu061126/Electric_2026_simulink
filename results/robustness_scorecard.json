@@ -1,0 +1,409 @@
+{
+  "model": "models/acac_robust_optimized_r2024a.slx",
+  "measurement_window_s": [
+    0.8,
+    1.0
+  ],
+  "model_status": "Original 20 kHz continuous-PWM control retained; diagnostics added to derived model",
+  "nominal_60Hz": {
+    "case": "nominal_60Hz",
+    "PF": 0.9969301284436396,
+    "efficiency_percent": 95.65765620884004,
+    "THD_max_percent": 1.3179877858507332,
+    "harmonic_THD_max_percent": 0.9622525602502026,
+    "Uline_V": 32.01309188391455,
+    "Uline_phases_V": [
+      32.01254955895157,
+      32.013237911132755,
+      32.01348818165932
+    ],
+    "Iout_measured_A": 2.000818242744661,
+    "output_frequency_Hz": 60.001403952661285,
+    "Vdc_V": 60.000954813633044,
+    "Pin_W": 115.97814318802823,
+    "Pout_W": 110.94197348820028,
+    "stable": true,
+    "source_file": "results/robust_final_nominal_60Hz.json",
+    "Iout_A": 2,
+    "Ui_V": 36
+  },
+  "load_sweep": [
+    {
+      "case": "load_02A",
+      "PF": 0.8793822738528188,
+      "efficiency_percent": 94.45025600360496,
+      "THD_max_percent": 1.3749888504890035,
+      "harmonic_THD_max_percent": 0.921556839195377,
+      "Uline_V": 32.01322290735978,
+      "Uline_phases_V": [
+        32.01347285273228,
+        32.01427904241034,
+        32.01191682693673
+      ],
+      "Iout_measured_A": 0.20008264317100077,
+      "output_frequency_Hz": 30.00328767088264,
+      "Vdc_V": 60.000165124057766,
+      "Pin_W": 11.746170566363737,
+      "Pout_W": 11.094288170550644,
+      "stable": true,
+      "source_file": "results/robust_final_load_02A.json",
+      "Iout_A": 0.2,
+      "Ui_V": 36
+    },
+    {
+      "case": "load_05A",
+      "PF": 0.9761711971079134,
+      "efficiency_percent": 96.848309796787,
+      "THD_max_percent": 1.2160732581614868,
+      "harmonic_THD_max_percent": 0.7337441209351241,
+      "Uline_V": 32.01268717255012,
+      "Uline_phases_V": [
+        32.01191157358356,
+        32.012826676151114,
+        32.01332326791569
+      ],
+      "Iout_measured_A": 0.500198237071096,
+      "output_frequency_Hz": 29.993114244523245,
+      "Vdc_V": 60.00037152125512,
+      "Pin_W": 28.637352755288955,
+      "Pout_W": 27.734792114040967,
+      "stable": true,
+      "source_file": "results/robust_final_load_05A.json",
+      "Iout_A": 0.5,
+      "Ui_V": 36
+    },
+    {
+      "case": "load_10A",
+      "PF": 0.9927192921059855,
+      "efficiency_percent": 96.99398905930431,
+      "THD_max_percent": 1.1919652070212583,
+      "harmonic_THD_max_percent": 0.7883321428424689,
+      "Uline_V": 32.01289461877289,
+      "Uline_phases_V": [
+        32.01264295467103,
+        32.01336190221073,
+        32.0126789994369
+      ],
+      "Iout_measured_A": 1.0004029568366528,
+      "output_frequency_Hz": 29.999077084756113,
+      "Vdc_V": 60.0007036261678,
+      "Pin_W": 57.18942344315737,
+      "Pout_W": 55.470303117535266,
+      "stable": true,
+      "source_file": "results/robust_final_load_10A.json",
+      "Iout_A": 1.0,
+      "Ui_V": 36
+    },
+    {
+      "case": "load_15A",
+      "PF": 0.9957317397561825,
+      "efficiency_percent": 96.45138993682605,
+      "THD_max_percent": 1.1986876048863904,
+      "harmonic_THD_max_percent": 0.8719566500491092,
+      "Uline_V": 32.01315511290803,
+      "Uline_phases_V": [
+        32.01309092087628,
+        32.01258258212057,
+        32.01379183572724
+      ],
+      "Iout_measured_A": 1.500616645917563,
+      "output_frequency_Hz": 29.999465957255783,
+      "Vdc_V": 60.000948137909035,
+      "Pin_W": 86.26812828725913,
+      "Pout_W": 83.20680880554565,
+      "stable": true,
+      "source_file": "results/robust_final_load_15A.json",
+      "Iout_A": 1.5,
+      "Ui_V": 36
+    },
+    {
+      "case": "load_20A",
+      "PF": 0.9969213217746019,
+      "efficiency_percent": 95.73101209891466,
+      "THD_max_percent": 1.2044467443696087,
+      "harmonic_THD_max_percent": 0.9157957584236432,
+      "Uline_V": 32.00864569189947,
+      "Uline_phases_V": [
+        32.00983997116257,
+        32.00468137719854,
+        32.0114157273373
+      ],
+      "Iout_measured_A": 2.000540355744517,
+      "output_frequency_Hz": 29.99621849327495,
+      "Vdc_V": 60.000975199732196,
+      "Pin_W": 115.85708471096339,
+      "Pout_W": 110.91115978210217,
+      "stable": true,
+      "source_file": "results/robust_final_load_20A.json",
+      "Iout_A": 2.0,
+      "Ui_V": 36
+    }
+  ],
+  "input_sweep": [
+    {
+      "case": "line_31V",
+      "PF": 0.9975704886372962,
+      "efficiency_percent": 94.97903507257413,
+      "THD_max_percent": 1.182811686479295,
+      "harmonic_THD_max_percent": 0.8959125169355637,
+      "Uline_V": 32.00847462570277,
+      "Uline_phases_V": [
+        32.00968872810827,
+        32.00386213048648,
+        32.01187301851353
+      ],
+      "Iout_measured_A": 2.0005296641075834,
+      "output_frequency_Hz": 29.99772923640336,
+      "Vdc_V": 60.00093783730725,
+      "Pin_W": 116.77311160418328,
+      "Pout_W": 110.90997462587337,
+      "stable": true,
+      "source_file": "results/robust_final_line_31V.json",
+      "Iout_A": 2,
+      "Ui_V": 31
+    },
+    {
+      "case": "line_33V",
+      "PF": 0.997376931570349,
+      "efficiency_percent": 95.33717567906093,
+      "THD_max_percent": 1.1891308535085618,
+      "harmonic_THD_max_percent": 0.9031413212474215,
+      "Uline_V": 32.00833115183088,
+      "Uline_phases_V": [
+        32.00985010373621,
+        32.00370928603819,
+        32.01143406571824
+      ],
+      "Iout_measured_A": 2.0005206969907583,
+      "output_frequency_Hz": 29.99621823435454,
+      "Vdc_V": 59.998665069360634,
+      "Pin_W": 116.33340249761501,
+      "Pout_W": 110.90898031258028,
+      "stable": true,
+      "source_file": "results/robust_final_line_33V.json",
+      "Iout_A": 2,
+      "Ui_V": 33
+    },
+    {
+      "case": "load_20A",
+      "PF": 0.9969213217746019,
+      "efficiency_percent": 95.73101209891466,
+      "THD_max_percent": 1.2044467443696087,
+      "harmonic_THD_max_percent": 0.9157957584236432,
+      "Uline_V": 32.00864569189947,
+      "Uline_phases_V": [
+        32.00983997116257,
+        32.00468137719854,
+        32.0114157273373
+      ],
+      "Iout_measured_A": 2.000540355744517,
+      "output_frequency_Hz": 29.99621849327495,
+      "Vdc_V": 60.000975199732196,
+      "Pin_W": 115.85708471096339,
+      "Pout_W": 110.91115978210217,
+      "stable": true,
+      "source_file": "results/robust_final_load_20A.json",
+      "Iout_A": 2,
+      "Ui_V": 36
+    },
+    {
+      "case": "line_39V",
+      "PF": 0.9963043985872099,
+      "efficiency_percent": 96.06039471603962,
+      "THD_max_percent": 1.1942135174613302,
+      "harmonic_THD_max_percent": 0.9092498776832487,
+      "Uline_V": 32.00881877285151,
+      "Uline_phases_V": [
+        32.00874250021047,
+        32.005030731775044,
+        32.01268308656903
+      ],
+      "Iout_measured_A": 2.0005511733031516,
+      "output_frequency_Hz": 29.99621515278584,
+      "Vdc_V": 60.000610524763026,
+      "Pin_W": 115.46106981821075,
+      "Pout_W": 110.91235941073533,
+      "stable": true,
+      "source_file": "results/robust_final_line_39V.json",
+      "Iout_A": 2,
+      "Ui_V": 39
+    },
+    {
+      "case": "line_41V",
+      "PF": 0.9959142828344237,
+      "efficiency_percent": 96.26697169379379,
+      "THD_max_percent": 1.1924431619328046,
+      "harmonic_THD_max_percent": 0.9092976606775269,
+      "Uline_V": 32.009197605054894,
+      "Uline_phases_V": [
+        32.009184782425336,
+        32.00497157353003,
+        32.013436459209316
+      ],
+      "Iout_measured_A": 2.000574850315917,
+      "output_frequency_Hz": 29.995339224902434,
+      "Vdc_V": 59.99927817295587,
+      "Pin_W": 115.21603210377023,
+      "Pout_W": 110.91498501204886,
+      "stable": true,
+      "source_file": "results/robust_final_line_41V.json",
+      "Iout_A": 2,
+      "Ui_V": 41
+    }
+  ],
+  "combined_corner_cases": [
+    {
+      "case": "corner_31V_02A",
+      "PF": 0.8969138655385087,
+      "efficiency_percent": 94.40742869569861,
+      "THD_max_percent": 1.3737611284766071,
+      "harmonic_THD_max_percent": 0.9245358028171929,
+      "Uline_V": 32.01322845255806,
+      "Uline_phases_V": [
+        32.01368667888614,
+        32.01438988743153,
+        32.011608791356515
+      ],
+      "Iout_measured_A": 0.20008267782849334,
+      "output_frequency_Hz": 30.002739002994968,
+      "Vdc_V": 60.000130540649415,
+      "Pin_W": 11.751503215292487,
+      "Pout_W": 11.094292018649986,
+      "stable": true,
+      "source_file": "results/robust_final_corner_31V_02A.json",
+      "Iout_A": 0.2,
+      "Ui_V": 31
+    },
+    {
+      "case": "line_31V",
+      "PF": 0.9975704886372962,
+      "efficiency_percent": 94.97903507257413,
+      "THD_max_percent": 1.182811686479295,
+      "harmonic_THD_max_percent": 0.8959125169355637,
+      "Uline_V": 32.00847462570277,
+      "Uline_phases_V": [
+        32.00968872810827,
+        32.00386213048648,
+        32.01187301851353
+      ],
+      "Iout_measured_A": 2.0005296641075834,
+      "output_frequency_Hz": 29.99772923640336,
+      "Vdc_V": 60.00093783730725,
+      "Pin_W": 116.77311160418328,
+      "Pout_W": 110.90997462587337,
+      "stable": true,
+      "source_file": "results/robust_final_line_31V.json",
+      "Iout_A": 2.0,
+      "Ui_V": 31
+    },
+    {
+      "case": "load_02A",
+      "PF": 0.8793822738528188,
+      "efficiency_percent": 94.45025600360496,
+      "THD_max_percent": 1.3749888504890035,
+      "harmonic_THD_max_percent": 0.921556839195377,
+      "Uline_V": 32.01322290735978,
+      "Uline_phases_V": [
+        32.01347285273228,
+        32.01427904241034,
+        32.01191682693673
+      ],
+      "Iout_measured_A": 0.20008264317100077,
+      "output_frequency_Hz": 30.00328767088264,
+      "Vdc_V": 60.000165124057766,
+      "Pin_W": 11.746170566363737,
+      "Pout_W": 11.094288170550644,
+      "stable": true,
+      "source_file": "results/robust_final_load_02A.json",
+      "Iout_A": 0.2,
+      "Ui_V": 36
+    },
+    {
+      "case": "load_20A",
+      "PF": 0.9969213217746019,
+      "efficiency_percent": 95.73101209891466,
+      "THD_max_percent": 1.2044467443696087,
+      "harmonic_THD_max_percent": 0.9157957584236432,
+      "Uline_V": 32.00864569189947,
+      "Uline_phases_V": [
+        32.00983997116257,
+        32.00468137719854,
+        32.0114157273373
+      ],
+      "Iout_measured_A": 2.000540355744517,
+      "output_frequency_Hz": 29.99621849327495,
+      "Vdc_V": 60.000975199732196,
+      "Pin_W": 115.85708471096339,
+      "Pout_W": 110.91115978210217,
+      "stable": true,
+      "source_file": "results/robust_final_load_20A.json",
+      "Iout_A": 2.0,
+      "Ui_V": 36
+    },
+    {
+      "case": "corner_41V_02A",
+      "PF": 0.8727769405516546,
+      "efficiency_percent": 95.07281345398111,
+      "THD_max_percent": 1.3748213177332933,
+      "harmonic_THD_max_percent": 0.923549793327989,
+      "Uline_V": 32.01281634611601,
+      "Uline_phases_V": [
+        32.012804758340764,
+        32.013977757047684,
+        32.01166652295958
+      ],
+      "Iout_measured_A": 0.2000801021632248,
+      "output_frequency_Hz": 30.00275416016539,
+      "Vdc_V": 59.99983907635853,
+      "Pin_W": 11.668957694891672,
+      "Pout_W": 11.094006381288334,
+      "stable": true,
+      "source_file": "results/robust_final_corner_41V_02A.json",
+      "Iout_A": 0.2,
+      "Ui_V": 41
+    },
+    {
+      "case": "line_41V",
+      "PF": 0.9959142828344237,
+      "efficiency_percent": 96.26697169379379,
+      "THD_max_percent": 1.1924431619328046,
+      "harmonic_THD_max_percent": 0.9092976606775269,
+      "Uline_V": 32.009197605054894,
+      "Uline_phases_V": [
+        32.009184782425336,
+        32.00497157353003,
+        32.013436459209316
+      ],
+      "Iout_measured_A": 2.000574850315917,
+      "output_frequency_Hz": 29.995339224902434,
+      "Vdc_V": 59.99927817295587,
+      "Pin_W": 115.21603210377023,
+      "Pout_W": 110.91498501204886,
+      "stable": true,
+      "source_file": "results/robust_final_line_41V.json",
+      "Iout_A": 2.0,
+      "Ui_V": 41
+    }
+  ],
+  "all_PF_ge_0_98": false,
+  "all_eta_ge_95": false,
+  "all_THD_le_2": true,
+  "SI_span_percent": 0.014303798313486382,
+  "SI_dev_percent": 0.04132158549932097,
+  "SU_span_percent": 0.00270766632504138,
+  "SU_dev_percent": 0.028742515796542634,
+  "original_requirements": {
+    "Req1": true,
+    "Req2": true,
+    "Req3": true,
+    "Req4": true,
+    "Req5": true,
+    "Req6": true,
+    "Req7": true
+  },
+  "all_original_requirements_pass": true,
+  "all_combined_corners_stable": true,
+  "highline_PFC_stable": true,
+  "all_extended_quality_targets_pass": false,
+  "baseline_metrics": "results/robust_baseline_metrics.json"
+}

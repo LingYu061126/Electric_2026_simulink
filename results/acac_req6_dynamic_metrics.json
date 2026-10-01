@@ -1,0 +1,44 @@
+{
+  "load_change_times_s": [
+    0.8,
+    1.05
+  ],
+  "target_current_sequence_A": [
+    2,
+    0.2,
+    2
+  ],
+  "measured_current_steady_A": [
+    2.00078192690292,
+    0.20024628985885792,
+    1.9996713830031325
+  ],
+  "line_voltage_steady_V": [
+    32.012510830542176,
+    32.039406376805353,
+    31.994742127982036
+  ],
+  "dc_bus_steady_V": [
+    60.00013627875601,
+    59.973947822466855,
+    59.998923149224417
+  ],
+  "max_abs_line_voltage_deviation_after_step_V": [
+    0.63658540103838845,
+    0.84644032628736809
+  ],
+  "settling_to_0p3_percent_s": [
+    0.12778,
+    0.16436999999999968
+  ],
+  "dc_bus_min_after_step_V": [
+    59.721749183012079,
+    55.575478102663773
+  ],
+  "dc_bus_max_after_step_V": [
+    63.90444112321952,
+    61.087407787003762
+  ],
+  "all_finite_waveforms": true,
+  "dynamic_current_sequence_confirmed": true
+}

@@ -1,0 +1,78 @@
+{
+  "stop_time_s": 1,
+  "steady_window_s": [
+    0.8,
+    1
+  ],
+  "input_frequency_Hz": 50,
+  "output_frequency_reference_Hz": 30,
+  "input_voltage_rms_V": 35.999999999999972,
+  "input_current_rms_A": 3.2281909141571625,
+  "input_power_W": 115.85708471096339,
+  "input_PF": 0.99692132177460191,
+  "Uline_rms_V": [
+    32.00983997116257,
+    32.004681377198537,
+    32.0114157273373
+  ],
+  "Uline_average_V": 32.008645691899467,
+  "Iline_rms_A": [
+    2.0007881108790708,
+    2.0003672296978432,
+    2.0004657266566364
+  ],
+  "Iline_average_A": 2.0005403557445169,
+  "output_frequency_measured_Hz": [
+    29.997871787391428,
+    29.994275218774966,
+    29.996508473658452
+  ],
+  "max_voltage_imbalance_percent": 0.012385137250381458,
+  "phase_separation_deg": [
+    120.00357733228822,
+    119.98786571003018,
+    120.00855695768166
+  ],
+  "output_THD_2to50_percent": [
+    0.91579575842364325,
+    0.87586808487393664,
+    0.9124237449515894
+  ],
+  "output_broadband_residual_percent": [
+    1.2044467443696087,
+    1.1806549671724782,
+    1.1963761001994615
+  ],
+  "input_current_THD_percent": 5.7635777076360579,
+  "input_displacement_factor": 0.99994241092749514,
+  "dc_bus_mean_V": 60.000975199732196,
+  "dc_bus_pp_V": 1.5817938824809659,
+  "PFC_dc_output_current_mean_A": 1.9175250180743355,
+  "PFC_dc_output_power_W": 115.20338226820675,
+  "inverter_dc_input_power_W": 112.53275723051382,
+  "output_power_W": 110.91115978210217,
+  "efficiency_percent": 95.731012098914661,
+  "PFC_duty_min": 0.15269814136819865,
+  "PFC_duty_max": 0.95,
+  "PFC_duty_saturation_samples": 2431,
+  "PFC_duty_floor_samples": 0,
+  "PFC_duty_ceiling_samples": 2431,
+  "inverter_modulation_min": 0.90592048935482383,
+  "inverter_modulation_max": 0.92891989437615541,
+  "inverter_shootthrough_samples": [
+    0,
+    0,
+    0
+  ],
+  "no_shootthrough": true,
+  "all_finite": true,
+  "input_voltage_target_V": 36,
+  "target_current_A": 2,
+  "Rphase_Ohm": 9.2376043070340135,
+  "validation_case": "load_20A",
+  "validation_model": "acac_robust_optimized_r2024a",
+  "measurement_window_s": [
+    0.8,
+    1
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "iteration": "E",
+  "change": "Bounded DC bus reference screen at 56, 58 and 59.5 V for 31 V/2 A",
+  "reason": "Reduce low-line PFC conduction losses without changing physical resistances",
+  "measurements": [
+    {
+      "Vdc_setpoint_V": 56,
+      "PF": 0.99763568408748826,
+      "efficiency_percent": 95.2112455214402,
+      "Uline_V": 30.99711314073069,
+      "THD_max_percent": 1.4662033133319441
+    },
+    {
+      "Vdc_setpoint_V": 58,
+      "PF": 0.99771855757413286,
+      "efficiency_percent": 95.07824908816562,
+      "Uline_V": 31.59925680227899,
+      "THD_max_percent": 1.1590738723985143
+    },
+    {
+      "Vdc_setpoint_V": 59.5,
+      "PF": 0.99758863543874721,
+      "efficiency_percent": 94.996377849488908,
+      "Uline_V": 31.949011952207119,
+      "THD_max_percent": 1.1948804956327641
+    }
+  ],
+  "decision": "Rejected: 56 and 58 V violate 32+/-0.1 V output; 59.5 V has eta 94.996378%, below 95%"
+}

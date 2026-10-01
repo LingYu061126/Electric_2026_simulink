@@ -1,0 +1,164 @@
+function [pfcGates, inverterGates, pfcDuty, inverterModulation, prechargeBypass, finalPrechargeBypass] = controller(t, vin, iin, vdc, va, vb, vc)
+%#codegen
+% Discrete controller for the 20 kHz totem-pole PFC and 12.6 kHz VSI.
+% Sample time is 1 us. Gate order: QFH,QFL,QSH,QSL; then Ahi,Alo,Bhi,Blo,Chi,Clo.
+
+persistent busInt currentInt outputIntA outputIntB outputIntC vaSquare vbSquare vcSquare lastRaw onAge slowPolarity prechargeLatched finalPrechargeLatched
+if isempty(busInt)
+    busInt = 0.0;
+    currentInt = 0.0;
+    outputIntA = 0.0;
+    outputIntB = 0.0;
+    outputIntC = 0.0;
+    vaSquare = 0.0;
+    vbSquare = 0.0;
+    vcSquare = 0.0;
+    lastRaw = false(1,10);
+    onAge = zeros(1,10);
+    slowPolarity = 1.0;
+    prechargeLatched = false;
+    finalPrechargeLatched = false;
+end
+
+Ts = 1e-6;
+deadTime = 1e-6;
+fPfc = 20e3;
+fInv = 12.6e3;
+% The 10 ohm path can precharge the unloaded bus to about 25 V with the
+% 2 ohm second-stage resistor still in series. Latch bypass at a line-voltage
+% zero crossing, then retain 2 ohms until the bus reaches 50 V.
+if (t >= 0.020) && (vdc >= 25.0) && (abs(vin) <= 5.0)
+    prechargeLatched = true;
+end
+if (t >= 0.020) && (vdc >= 50.0) && (abs(vin) <= 5.0)
+    finalPrechargeLatched = true;
+end
+prechargeBypass = prechargeLatched;
+finalPrechargeBypass = finalPrechargeLatched;
+
+%% PFC outer bus-voltage PI, with 150 ms soft start and an 8 Hz design target.
+vdcRef = min(60.0 * max(t,0.0) / 0.15, 60.0);
+busError = vdcRef - vdc;
+gUnclamped = 0.012 * busError + busInt;
+gCommand = min(max(gUnclamped,0.0),0.14);
+if (gUnclamped > 0.0 && gUnclamped < 0.14) || ...
+        (gUnclamped >= 0.14 && busError < 0.0) || ...
+        (gUnclamped <= 0.0 && busError > 0.0)
+    busInt = busInt + 0.50 * Ts * busError;
+end
+
+% Signed conductance command keeps the input current aligned with input voltage.
+iReference = gCommand * vin;
+iError = iReference - iin;
+if vin > 0.5
+    polarity = 1.0;
+elseif vin < -0.5
+    polarity = -1.0;
+else
+    polarity = 0.0;
+end
+vdcForControl = max(vdc,20.0);
+dutyBase = 1.0 - abs(vin) / vdcForControl;
+dutyUnclamped = dutyBase + 0.105 * polarity * iError + currentInt;
+pfcDuty = min(max(dutyUnclamped,0.02),0.95);
+if (dutyUnclamped > 0.02 && dutyUnclamped < 0.95) || ...
+        (dutyUnclamped >= 0.95 && polarity*iError < 0.0) || ...
+        (dutyUnclamped <= 0.02 && polarity*iError > 0.0)
+    currentInt = currentInt + 66.0 * Ts * polarity * iError;
+end
+
+%% Independent phase RMS loops balance the selected three-phase output.
+alpha = Ts / (1.0/Fout_Hz + Ts);
+vaSquare = vaSquare + alpha * (va*va - vaSquare);
+vbSquare = vbSquare + alpha * (vb*vb - vbSquare);
+vcSquare = vcSquare + alpha * (vc*vc - vcSquare);
+vphaseRef = 18.475208614 * min(max((t-0.18)/0.05,0.0),1.0);
+vphaseRmsA = sqrt(max(vaSquare,0.0));
+vphaseRmsB = sqrt(max(vbSquare,0.0));
+vphaseRmsC = sqrt(max(vcSquare,0.0));
+outputErrorA = vphaseRef - vphaseRmsA;
+outputErrorB = vphaseRef - vphaseRmsB;
+outputErrorC = vphaseRef - vphaseRmsC;
+modulationFF = 2.0 * sqrt(2.0) * vphaseRef / max(vdc,20.0);
+modulationAUnclamped = modulationFF + 0.030 * outputErrorA + outputIntA;
+modulationBUnclamped = modulationFF + 0.030 * outputErrorB + outputIntB;
+modulationCUnclamped = modulationFF + 0.030 * outputErrorC + outputIntC;
+modulationA = min(max(modulationAUnclamped,0.0),0.95);
+modulationB = min(max(modulationBUnclamped,0.0),0.95);
+modulationC = min(max(modulationCUnclamped,0.0),0.95);
+if (modulationAUnclamped > 0.0 && modulationAUnclamped < 0.95) || ...
+        (modulationAUnclamped >= 0.95 && outputErrorA < 0.0) || ...
+        (modulationAUnclamped <= 0.0 && outputErrorA > 0.0)
+    outputIntA = min(max(outputIntA + 0.80 * Ts * outputErrorA,-0.08),0.08);
+end
+if (modulationBUnclamped > 0.0 && modulationBUnclamped < 0.95) || ...
+        (modulationBUnclamped >= 0.95 && outputErrorB < 0.0) || ...
+        (modulationBUnclamped <= 0.0 && outputErrorB > 0.0)
+    outputIntB = min(max(outputIntB + 0.80 * Ts * outputErrorB,-0.08),0.08);
+end
+if (modulationCUnclamped > 0.0 && modulationCUnclamped < 0.95) || ...
+        (modulationCUnclamped >= 0.95 && outputErrorC < 0.0) || ...
+        (modulationCUnclamped <= 0.0 && outputErrorC > 0.0)
+    outputIntC = min(max(outputIntC + 0.80 * Ts * outputErrorC,-0.08),0.08);
+end
+inverterModulation = (modulationA + modulationB + modulationC) / 3.0;
+
+%% Triangular carriers and raw complementary commands.
+phasePfc = mod(t*fPfc,1.0);
+carrierPfc = 1.0 - 4.0*abs(phasePfc-0.5);
+pwmPfc = carrierPfc < (2.0*pfcDuty-1.0);
+if vin > 0.5
+    slowPolarity = 1.0;
+elseif vin < -0.5
+    slowPolarity = -1.0;
+end
+rawPfc = false(1,4);
+if slowPolarity > 0.0
+    rawPfc(1) = ~pwmPfc;
+    rawPfc(2) = pwmPfc;
+    rawPfc(3) = false;
+    rawPfc(4) = true;
+else
+    rawPfc(1) = pwmPfc;
+    rawPfc(2) = ~pwmPfc;
+    rawPfc(3) = true;
+    rawPfc(4) = false;
+end
+
+phaseInv = mod(t*fInv,1.0);
+carrierInv = 1.0 - 4.0*abs(phaseInv-0.5);
+theta = 2.0*pi*Fout_Hz*t;
+enableInv = (t >= 0.18) && (vdc >= 52.0);
+rawInv = false(1,6);
+if enableInv
+    pwmA = modulationA*sin(theta) > carrierInv;
+    pwmB = modulationB*sin(theta-2.0*pi/3.0) > carrierInv;
+    pwmC = modulationC*sin(theta+2.0*pi/3.0) > carrierInv;
+    rawInv(1) = pwmA;
+    rawInv(2) = ~pwmA;
+    rawInv(3) = pwmB;
+    rawInv(4) = ~pwmB;
+    rawInv(5) = pwmC;
+    rawInv(6) = ~pwmC;
+end
+
+%% Turn-on delay creates 1 us dead time; each turn-off is immediate.
+raw = [rawPfc rawInv];
+gates = false(1,10);
+for k = 1:10
+    if raw(k)
+        if lastRaw(k)
+            onAge(k) = min(onAge(k)+Ts,deadTime);
+        else
+            onAge(k) = 0.0;
+        end
+        gates(k) = onAge(k) >= deadTime;
+    else
+        onAge(k) = 0.0;
+        gates(k) = false;
+    end
+    lastRaw(k) = raw(k);
+end
+pfcGates = gates(1:4).';
+inverterGates = gates(5:10).';
+end
