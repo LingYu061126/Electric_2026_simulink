@@ -1,0 +1,26 @@
+{
+  "feature": "Additional Engineering Feature: Protection + Test Dashboard",
+  "test": "3.0 A RMS commanded current exceeds 2.2 A RMS safe limiter",
+  "current_limit_rms_A": 2.2,
+  "commanded_current_rms_A": 3,
+  "window_s": [
+    0.5,
+    0.65
+  ],
+  "limiter_active_fraction": 1,
+  "id_reference_peak_max_A": 3.1112698372208096,
+  "id_measured_peak_mean_A": 3.1091591595491828,
+  "iline_rms_A": [
+    2.206656405960814,
+    2.2060050032650529,
+    2.2004713751016718
+  ],
+  "vdc_min_V": 60,
+  "vdc_max_V": 60,
+  "gate_overlap_count": [
+    0,
+    0,
+    0
+  ],
+  "pass": true
+}

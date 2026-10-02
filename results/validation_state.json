@@ -1,0 +1,89 @@
+{
+  "mode": "full",
+  "generated_at": "20261002T205504",
+  "models": [
+    "/home/chidan/Documents/Matlab_Electric/models/converter1_basic_test_r2024a.slx",
+    "/home/chidan/Documents/Matlab_Electric/models/energy_recovery_testbench_r2024a.slx"
+  ],
+  "Basic1": {
+    "created": true,
+    "configured": true,
+    "compiled": true,
+    "simulated": true,
+    "measured": true,
+    "validated": true
+  },
+  "Basic2": {
+    "created": true,
+    "configured": true,
+    "compiled": true,
+    "simulated": true,
+    "measured": true,
+    "validated": true
+  },
+  "Basic3": {
+    "created": true,
+    "configured": true,
+    "compiled": true,
+    "simulated": true,
+    "measured": true,
+    "validated": true
+  },
+  "Basic4": {
+    "created": true,
+    "configured": true,
+    "compiled": true,
+    "simulated": true,
+    "measured": true,
+    "validated": true
+  },
+  "Converter2Smoke": {
+    "created": true,
+    "configured": true,
+    "compiled": true,
+    "simulated": true,
+    "measured": true,
+    "validated": true
+  },
+  "Bonus1": {
+    "created": true,
+    "configured": true,
+    "compiled": true,
+    "simulated": true,
+    "measured": true,
+    "validated": true
+  },
+  "Bonus2": {
+    "created": true,
+    "configured": true,
+    "compiled": true,
+    "simulated": true,
+    "measured": true,
+    "validated": true
+  },
+  "Bonus3AdditionalFeature": {
+    "created": true,
+    "configured": true,
+    "compiled": true,
+    "simulated": true,
+    "measured": true,
+    "validated": true
+  },
+  "FinalRegression": {
+    "created": true,
+    "configured": true,
+    "compiled": true,
+    "simulated": true,
+    "measured": true,
+    "validated": true
+  },
+  "FinalReport": {
+    "created": true,
+    "configured": true,
+    "compiled": true,
+    "simulated": true,
+    "measured": true,
+    "validated": true,
+    "path": "/home/chidan/Documents/Matlab_Electric/docs/converter_energy_recovery_final_report.md"
+  }
+}

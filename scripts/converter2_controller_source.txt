@@ -1,0 +1,95 @@
+function [gates, id_meas, iq_meas, id_ref_used, mod_peak, current_limited] = converter2_controller(t, va, vb, vc, ia, ib, ic, vdc, iref_rms, regen_enable)
+%#codegen
+% Current ia,b,c is positive from Converter 1 through Lconn into Converter 2.
+% Park d axis uses sin(theta); positive id thus absorbs real AC power.
+% L di/dt = v1 - v2 - R i. All output gates have 1 us turn-on dead time.
+
+persistent intD intQ idFilt iqFilt vdFilt vqFilt lastRaw onAge
+if isempty(intD)
+    intD=0.0; intQ=0.0;
+    idFilt=0.0; iqFilt=0.0; vdFilt=0.0; vqFilt=0.0;
+    lastRaw=false(1,6); onAge=zeros(1,6);
+end
+Ts=1e-6;
+deadTime=1e-6;
+fsw=12.6e3;
+Lconn=0.003;
+Rconn=0.05;
+omega=2*pi*Fout_Hz;
+wc=2*pi*300.0;
+Kp=Lconn*wc;
+Ki=Rconn*wc;
+alpha=Ts/(1/(2*pi*1500)+Ts);
+theta=omega*t;
+sa=sin(theta); sb=sin(theta-2*pi/3); sc=sin(theta+2*pi/3);
+ca=cos(theta); cb=cos(theta-2*pi/3); cc=cos(theta+2*pi/3);
+idInstant=(2/3)*(ia*sa+ib*sb+ic*sc);
+iqInstant=(2/3)*(ia*ca+ib*cb+ic*cc);
+vdInstant=(2/3)*(va*sa+vb*sb+vc*sc);
+vqInstant=(2/3)*(va*ca+vb*cb+vc*cc);
+idFilt=idFilt+alpha*(idInstant-idFilt);
+iqFilt=iqFilt+alpha*(iqInstant-iqFilt);
+vdFilt=vdFilt+alpha*(vdInstant-vdFilt);
+vqFilt=vqFilt+alpha*(vqInstant-vqFilt);
+id_meas=idFilt;
+iq_meas=iqFilt;
+
+% Engineering protection: 2.2 A RMS is 10% above the 2 A rating.
+current_limited=(iref_rms>2.2);
+safeRefRms=min(max(iref_rms,0.0),2.2);
+enabled=(regen_enable>0.5)&&(t>=0.25)&&(vdc>=50.0)&&(vdc<=70.0);
+ramp=min(max((t-0.25)/0.15,0.0),1.0);
+id_ref_used=sqrt(2.0)*safeRefRms*ramp;
+if ~enabled
+    id_ref_used=0.0;
+end
+ed=id_ref_used-idFilt;
+eq=-iqFilt;
+
+% For the stated Park basis: L*did/dt=vd1-vd2-R*id+L*w*iq;
+%                         L*diq/dt=vq1-vq2-R*iq-L*w*id.
+v2d=vdFilt+Lconn*omega*iqFilt-Kp*ed-intD;
+v2q=vqFilt-Lconn*omega*idFilt-Kp*eq-intQ;
+vLimit=0.95*max(vdc,1.0)/2.0;
+vNorm=hypot(v2d,v2q);
+if vNorm>vLimit
+    scale=vLimit/vNorm;
+    v2d=v2d*scale; v2q=v2q*scale;
+else
+    intD=min(max(intD+Ki*Ts*ed,-8.0),8.0);
+    intQ=min(max(intQ+Ki*Ts*eq,-8.0),8.0);
+end
+
+v2a=v2d*sa+v2q*ca;
+v2b=v2d*sb+v2q*cb;
+v2c=v2d*sc+v2q*cc;
+ma=min(max(2*v2a/max(vdc,1.0),-0.95),0.95);
+mb=min(max(2*v2b/max(vdc,1.0),-0.95),0.95);
+mc=min(max(2*v2c/max(vdc,1.0),-0.95),0.95);
+mod_peak=max(max(abs(ma),abs(mb)),abs(mc));
+
+phase=mod(t*fsw,1.0);
+carrier=1.0-4.0*abs(phase-0.5);
+raw=false(1,6);
+if enabled
+    ah=ma>carrier; bh=mb>carrier; ch=mc>carrier;
+    raw(1)=ah; raw(2)=~ah;
+    raw(3)=bh; raw(4)=~bh;
+    raw(5)=ch; raw(6)=~ch;
+end
+gates=false(6,1);
+for k=1:6
+    if raw(k)
+        if lastRaw(k)
+            onAge(k)=min(onAge(k)+Ts,deadTime);
+        else
+            onAge(k)=0.0;
+        end
+        gates(k)=onAge(k)>=deadTime;
+    else
+        onAge(k)=0.0;
+        gates(k)=false;
+    end
+    lastRaw(k)=raw(k);
+end
+end

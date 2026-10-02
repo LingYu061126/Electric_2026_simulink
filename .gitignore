@@ -3,10 +3,13 @@
 slprj/
 /.matlab_sdi_archive/
 *.asv
+*.slx.autosave
 *.m~
 
 # Large simulation traces are reproducible from scripts and models.
 /results/*.mat
+/results/basic_req4_frequency_sweep_progress.json
+/results/basic_req4_checkpoint_before_full_*.json
 
 # Python generated files
 __pycache__/

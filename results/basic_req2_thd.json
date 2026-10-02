@@ -1,0 +1,24 @@
+{
+  "stage": "Basic-2",
+  "model": "converter1_basic_test_r2024a",
+  "steady_window_s": [
+    0.8,
+    1
+  ],
+  "cycles": 10,
+  "harmonics_included": [
+    2,
+    50
+  ],
+  "THD_2_to_50_percent": [
+    1.187370562013192,
+    1.1275799053107296,
+    1.1940678731652095
+  ],
+  "broadband_residual_percent": [
+    1.3461839205615558,
+    1.2934448269450789,
+    1.3522757459328554
+  ],
+  "pass": true
+}

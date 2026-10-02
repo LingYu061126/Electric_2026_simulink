@@ -1,0 +1,44 @@
+{
+  "stage": "Bonus-1",
+  "model": "energy_recovery_testbench_r2024a",
+  "window_s": [
+    0.8,
+    1
+  ],
+  "regen_reference_rms_A": 1.2,
+  "Converter1_output_Iline_rms_A": [
+    1.2294413471161927,
+    1.1941129483973669,
+    1.2067649342018361
+  ],
+  "Converter1_Uline_rms_V": [
+    32.013448898042121,
+    32.011892336477509,
+    32.013598884596085
+  ],
+  "Converter1_frequency_Hz": [
+    49.999861661638178,
+    49.99998435655877,
+    50.000168973483817
+  ],
+  "P_converter1_AC_export_W": 67.295554365744081,
+  "P_converter2_AC_absorbed_W": 67.2756779158918,
+  "P_converter2_DC_return_W": 66.826492432108211,
+  "P_source_W": 1.2545800791097417,
+  "P_connection_winding_loss_W": 0.21968467733374131,
+  "P_connection_energy_change_W": -0.00048371586290722073,
+  "P_connection_balance_residual_W": -0.19932451161855777,
+  "connection_balance_residual_percent": 0.29619268835390011,
+  "recovery_ratio_percent": 99.302982287527385,
+  "source_voltage_mean_V": 60,
+  "source_current_mean_A": 0.020909667985162368,
+  "gate_overlap_count": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "pass": true
+}

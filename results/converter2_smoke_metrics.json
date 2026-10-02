@@ -1,0 +1,44 @@
+{
+  "stage": "Converter2 0.5 A current-loop smoke",
+  "window_s": [
+    0.8,
+    1
+  ],
+  "Iline_rms_A": [
+    0.52343987827328731,
+    0.51583080790655989,
+    0.51204203103314472
+  ],
+  "v1_reconstruction_rms_error_V": [
+    2.8092961652666135E-9,
+    2.8110191259035457E-9,
+    2.78994162402247E-9
+  ],
+  "P_converter1_AC_export_W": 28.730544154329312,
+  "P_converter2_AC_absorbed_W": 28.850973046884459,
+  "P_connection_unit_loss_W": -0.12042889255514666,
+  "P_connection_direct_inductor_W": -0.12042889255850553,
+  "vconn_sensor_mismatch_rms_V": [
+    2.8007063619315266E-9,
+    2.8233638712068964E-9,
+    2.8025612853516602E-9
+  ],
+  "P_connection_winding_loss_W": 0.040113209223740849,
+  "P_connection_energy_change_W": -0.00022871673241563458,
+  "P_connection_balance_residual_W": -0.16031338504647186,
+  "P_connection_direct_balance_residual_W": -0.16031338504983073,
+  "connection_balance_residual_percent_of_transfer": 0.55798937947478711,
+  "P_returned_DC_W": 28.656181023922997,
+  "P_source_W": 0.29111284755029893,
+  "P_converter2_modelled_loss_W": 0.1947920229614617,
+  "dc_bus_mean_V": 60,
+  "id_measured_mean_peak_A": 0.70716902997383824,
+  "iq_measured_mean_peak_A": -0.00010418205144764286,
+  "id_reference_mean_peak_A": 0.707106781186568,
+  "gate_overlap_count": [
+    0,
+    0,
+    0
+  ],
+  "pass": true
+}

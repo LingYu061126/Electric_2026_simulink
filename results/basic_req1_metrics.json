@@ -1,0 +1,56 @@
+{
+  "stage": "Basic-1",
+  "model": "converter1_basic_test_r2024a",
+  "dc_source_voltage_design_choice_V": 60,
+  "required_spwm_modulation_index_ideal": 0.8709296863229079,
+  "rated_phase_resistance_ohm": 9.2376043070340135,
+  "steady_window_s": [
+    0.8,
+    1
+  ],
+  "Uline_rms_V": [
+    32.01271689164237,
+    32.012412118818339,
+    32.0124943005922
+  ],
+  "Iline_rms_A": [
+    2.0005753118415921,
+    2.0005701755213305,
+    2.0005562650390414
+  ],
+  "frequency_measured_Hz": [
+    50.000176193853463,
+    49.999999999992525,
+    49.999999999989228
+  ],
+  "phase_voltage_fundamental_angle_deg": [
+    268.60283163386333,
+    148.60248578402252,
+    28.602425823953396
+  ],
+  "phase_step_deg": [
+    -120.00034584984087,
+    -120.00005996006911,
+    -119.99959419009006
+  ],
+  "line_voltage_dc_offset_V": [
+    0.023238664567471021,
+    -0.0345747552303066,
+    0.011336090662836383
+  ],
+  "source_voltage_mean_V": 60,
+  "source_current_mean_A": 1.8771007311097834,
+  "source_power_mean_W": 112.62604386657968,
+  "ac_output_power_mean_W": 110.92614789493791,
+  "sine_residual_percent": [
+    1.346183852863494,
+    1.293444825345452,
+    1.352275697313053
+  ],
+  "gate_overlap_count": [
+    0,
+    0,
+    0
+  ],
+  "pass": true
+}
