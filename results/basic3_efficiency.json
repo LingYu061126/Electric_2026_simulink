@@ -1,0 +1,14 @@
+{
+  "stage": "Basic-3",
+  "Pout1_W": 47.515597209168618,
+  "Pdc1_W": 49.775601720266394,
+  "Paux1_assumed_W": 1,
+  "efficiency_percent": 95.459613881116368,
+  "definition": "eta=mean(Uo*Io1)/mean(Vdc1*Idc1)*100",
+  "auxiliary_power_included_in_dc_measurement": true,
+  "auxiliary_power_is_hardware_assumption": true,
+  "loss_model": "MOSFET Rds, inductor winding resistance, capacitor ESR, output isolation switch resistance, and physical auxiliary resistor",
+  "switching_transition_losses_modeled": false,
+  "sensitivity_results_file": "basic3_efficiency_sensitivity.json",
+  "pass": true
+}

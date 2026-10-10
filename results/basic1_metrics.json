@@ -1,0 +1,29 @@
+{
+  "stage": "Basic-1",
+  "inverter1_enabled": true,
+  "inverter2_enabled": false,
+  "S1_closed": true,
+  "S_Load_closed": true,
+  "S2_open": true,
+  "R_load_Ohm": 12,
+  "Uo_rms_V": 23.899475471849463,
+  "output_frequency_Hz": 50.000987924044296,
+  "Io_total_rms_A": 1.9881437036263312,
+  "Io1_rms_A": 1.9881439350054326,
+  "Io2_rms_A": 2.3191616320100066E-7,
+  "I_load_rms_A": 1.9881437044853958,
+  "Pout1_W": 47.515597209168618,
+  "Pout_W": 47.515597209168618,
+  "Pdc1_W": 49.775601720266394,
+  "steady_window_s": [
+    0.1,
+    0.299998
+  ],
+  "measurement_sample_rate_Hz": 1.0E+6,
+  "gate_overlap_inv1_legA_samples": 0,
+  "gate_overlap_inv1_legB_samples": 0,
+  "gate_overlap_inv2_legA_samples": 0,
+  "gate_overlap_inv2_legB_samples": 0,
+  "inv2_gate_high_samples": 0,
+  "pass": true
+}

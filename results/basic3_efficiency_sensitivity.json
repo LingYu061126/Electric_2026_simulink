@@ -1,0 +1,46 @@
+{
+  "stage": "Basic-3 auxiliary-power sensitivity",
+  "auxiliary_power_values_W": [
+    0,
+    0.5,
+    1,
+    2
+  ],
+  "cases": [
+    {
+      "Paux1_assumed_W": 0,
+      "Pout1_W": 47.515597209168618,
+      "Pdc1_W": 48.7756027202664,
+      "efficiency_percent": 97.416730002653054,
+      "pass": true
+    },
+    {
+      "Paux1_assumed_W": 0.5,
+      "Pout1_W": 47.515597209168618,
+      "Pdc1_W": 49.275601720266394,
+      "efficiency_percent": 96.428243492409933,
+      "pass": true
+    },
+    {
+      "Paux1_assumed_W": 1,
+      "Pout1_W": 47.515597209168618,
+      "Pdc1_W": 49.775601720266394,
+      "efficiency_percent": 95.459613881116368,
+      "pass": true
+    },
+    {
+      "Paux1_assumed_W": 2,
+      "Pout1_W": 47.515597209168618,
+      "Pdc1_W": 50.775601720266387,
+      "efficiency_percent": 93.579584681127315,
+      "pass": true
+    }
+  ],
+  "all_points_eta_at_least_88_percent": true,
+  "power_definition": "Pout1=mean(Uo*Io1); Pdc1=mean(Vdc1*Idc1)",
+  "measurement_window_s": [
+    0.1,
+    0.299998
+  ],
+  "switching_model": true
+}

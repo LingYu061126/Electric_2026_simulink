@@ -1,0 +1,35 @@
+{
+  "stage": "Bonus-1",
+  "inverter1_enabled": true,
+  "inverter2_enabled": true,
+  "controller1_uses_Io1": true,
+  "controller2_uses_Io2": true,
+  "local_virtual_resistance_ohm": 0.02,
+  "droop_enabled_in_both_controllers": true,
+  "S1_closed": true,
+  "S2_open": true,
+  "R_load_Ohm": 6,
+  "Uo_rms_V": 23.903553860135293,
+  "frequency_Hz": 50.001009953936368,
+  "Io_total_rms_A": 3.9703602450220861,
+  "Io1_rms_A": 1.9851801225110433,
+  "Io2_rms_A": 1.985180122511043,
+  "I_load_rms_A": 3.9703602458492995,
+  "current_sharing_imbalance_percent": 5.5925556176778636E-15,
+  "circulating_current_definition": "(i1-i2)/2",
+  "circulating_current_rms_A": 2.7959987340315287E-16,
+  "gate_overlap_samples": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "inverter2_gate_high_samples": 299539,
+  "measurement_window_s": [
+    0.1,
+    0.3
+  ],
+  "all_signals_finite": true,
+  "all_gates_nonoverlap": true,
+  "pass": true
+}

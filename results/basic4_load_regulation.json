@@ -1,0 +1,98 @@
+{
+  "stage": "Basic-4",
+  "inverter1_only": true,
+  "S1_closed": true,
+  "S2_open": true,
+  "physical_load_disconnect_at_0A": true,
+  "current_targets_A": [
+    0,
+    0.2,
+    0.5,
+    1,
+    1.5,
+    2
+  ],
+  "load_resistances_Ohm": [
+    12,
+    120,
+    48,
+    24,
+    16,
+    12
+  ],
+  "Uo_rms_V": [
+    23.930532395078917,
+    23.889652270976267,
+    23.897400893596537,
+    23.887801491971722,
+    23.894048118542493,
+    23.899475471849463
+  ],
+  "measured_load_current_rms_A": [
+    2.3930529520561113E-7,
+    0.1990456026091032,
+    0.49764479901224395,
+    0.99445491410607612,
+    1.4914205179646947,
+    1.9881437044853958
+  ],
+  "frequency_Hz": [
+    50.000230609302719,
+    49.999288069256821,
+    49.999064409624204,
+    50.000188652049459,
+    50.000359724874521,
+    50.000987924044296
+  ],
+  "no_load_voltage_V": 23.930532395078917,
+  "Uo_2A_V": 23.899475471849463,
+  "load_regulation_percent": 0.12977949139083869,
+  "load_regulation_limit_percent": 0.2,
+  "gate_overlap_samples": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "measurement_window_s": [
+    0.1,
+    0.299998
+  ],
+  "all_points_finite": true,
+  "all_points_gate_safe": true,
+  "full_load_current_gate_A": 1.8,
+  "pass": true,
+  "regulation_definition": "abs(Uo_2A-Uo_no_load)/Uo_no_load*100"
+}

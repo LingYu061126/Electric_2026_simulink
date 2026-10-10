@@ -1,0 +1,21 @@
+{
+  "case_names": [
+    "dc_undervoltage",
+    "overcurrent_trip",
+    "reference_limit",
+    "grid_voltage_out_of_range",
+    "grid_frequency_out_of_range"
+  ],
+  "all_cases_pass": true,
+  "dc_undervoltage_blocks_gate": true,
+  "overcurrent_trip_latches": true,
+  "reference_limits_to_2A_per_inverter": true,
+  "grid_voltage_out_of_range_suppresses_current": true,
+  "grid_frequency_out_of_range_suppresses_current": true,
+  "undervoltage_threshold_V": 40,
+  "overcurrent_threshold_A": 4,
+  "current_reference_limits_A": [
+    0,
+    2
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "mode": "grid_current",
+  "S1_closed": false,
+  "S2_closed": true,
+  "inverter1_enabled": true,
+  "inverter2_enabled": true,
+  "Io_total_set_A": 2,
+  "measurement_window_s": [
+    0.34999799999999992,
+    0.44999799999999995
+  ],
+  "grid_primary_voltage_rms_V": 24.114988579758545,
+  "Io_total_rms_A": 1.9753558805801039,
+  "Io1_rms_A": 0.987677940290052,
+  "Io2_rms_A": 0.987677940290052,
+  "PLL1_frequency_mean_Hz": 50.050354067453952,
+  "PLL2_frequency_mean_Hz": 50.050354067453952,
+  "PLL1_lock_fraction": 1,
+  "PLL2_lock_fraction": 1,
+  "PLL1_phase_error_rms_pu": 0.011039491467211586,
+  "PLL2_phase_error_rms_pu": 0.011039491467211586,
+  "current_error_percent": 1.2322059709948041,
+  "all_signals_finite": true,
+  "both_plls_locked": true,
+  "protection_vdc_ok_both": true,
+  "protection_permitted_both": true,
+  "protection_no_overcurrent_trip": true,
+  "protection_current_reference_bounded": true,
+  "currents_bounded": true,
+  "current_tracking_pass": true,
+  "pass": true
+}

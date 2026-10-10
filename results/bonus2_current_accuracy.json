@@ -1,0 +1,33 @@
+{
+  "setpoints_A": [
+    2,
+    2.5,
+    3,
+    3.5,
+    4
+  ],
+  "measured_total_current_A": [
+    1.9753684822520896,
+    2.4705532860460182,
+    2.9695937345729706,
+    3.4664151649158135,
+    3.9639067904686591
+  ],
+  "error_percent": [
+    1.2315758873955196,
+    1.1778685581592718,
+    1.0135421809009801,
+    0.95956671669104354,
+    0.90233023828352188
+  ],
+  "all_points_lt_6_percent": true,
+  "all_points_PLL_locked": true,
+  "all_points_gate_safe": true,
+  "all_points_pass": true,
+  "measurement_window_s": [
+    0.25,
+    0.45
+  ],
+  "mode": "two independent PLLs and current PR controllers",
+  "current_definition": "TP_Io low-voltage transformer-primary common-bus RMS"
+}
